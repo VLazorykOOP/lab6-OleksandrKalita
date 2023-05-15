@@ -45,7 +45,7 @@ public:
 
 
 int main() {
-    Shape* shape; // створюємо вказівник на базовий клас
+    Shape* shape; 
 
     Parallelepiped parallelepiped(3, 4, 5); 
     shape = &parallelepiped; 
