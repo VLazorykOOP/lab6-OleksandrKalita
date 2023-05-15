@@ -45,7 +45,19 @@ public:
 
 
 int main() {
+    Shape* shape; // створюємо вказівник на базовий клас
 
+    Parallelepiped parallelepiped(3, 4, 5); 
+    shape = &parallelepiped; 
+    cout << "Surface area of ​​a parallelepiped: " << shape->getSurfaceArea() << endl;
 
+    Tetrahedron tetrahedron(3); 
+    shape = &tetrahedron; 
+    cout << "Surface area of ​​the tetrahedron: " << shape->getSurfaceArea() << endl;
+
+    Sphere sphere(3); 
+    shape = &sphere; 
+    cout << "Surface area of ​​the sphere: " << shape->getSurfaceArea() << endl;
+    
     return 0;
 }
