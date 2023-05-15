@@ -69,6 +69,30 @@ public:
     }
 };
 
+class Bay : public virtual Waterbody {
+protected:
+    string bayType;
+public:
+    Bay(string n, float a, string t) : Waterbody(n, a), bayType(t) {}
+    virtual ~Bay() {}
+    virtual void print() {
+        Waterbody::print();
+        cout << "Bay type: " << bayType << endl;
+    }
+};
+
+class Cove : public virtual Waterbody {
+protected:
+    string coveType;
+public:
+    Cove(string n, float a, string t) : Waterbody(n, a), coveType(t) {}
+    virtual ~Cove() {}
+    virtual void print() {
+        Waterbody::print();
+        cout << "Cove type: " << coveType << endl;
+    }
+};
+
 
 int main() {
     Shape* shape; 
