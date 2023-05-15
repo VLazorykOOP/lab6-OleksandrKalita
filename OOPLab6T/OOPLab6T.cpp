@@ -44,6 +44,32 @@ public:
 };
 
 
+
+class Waterbody {
+protected:
+    string name;
+    float area;
+public:
+    Waterbody(string n, float a) : name(n), area(a) {}
+    virtual ~Waterbody() {}
+    virtual void print() {
+        cout << "Waterbody: " << name << ", area: " << area << " sq km" << endl;
+    }
+};
+
+class Bay : public virtual Waterbody {
+protected:
+    string bayType;
+public:
+    Bay(string n, float a, string t) : Waterbody(n, a), bayType(t) {}
+    virtual ~Bay() {}
+    virtual void print() {
+        Waterbody::print();
+        cout << "Bay type: " << bayType << endl;
+    }
+};
+
+
 int main() {
     Shape* shape; 
 
